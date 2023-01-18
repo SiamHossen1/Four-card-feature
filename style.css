@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --clr-Red: hsl(0, 78%, 62%);
+    --clr-Cyan: hsl(180, 62%, 55%);
+    --clr-Orange: hsl(34, 97%, 64%);
+    --clr-Blue: hsl(212, 86%, 64%);
+
+    --clr-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --clr-Grayish-Blue: hsl(229, 6%, 66%);
+    --clr-Very-Light-Gray: hsl(0, 0%, 98%);
+
+    --ff-primary: 'Poppins', sans-serif;
+
+    --fw-thin: 200;
+    --fw-regular: 400;
+    --fw-bold: 600;
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+body{
+    font-family: var(--ff-primary);
+    margin: 3.5rem 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: var(--clr-Very-Light-Gray);
+    
+}
+
+section{
+    padding: 1rem 1.5rem;
+}
+
+.title-container{
+    text-align: center;
+}
+
+.title-container h1:nth-child(1){
+    font-weight: var(--fw-thin);
+    color: var(--clr-Very-Dark-Blue);
+}
+.title-container h1:nth-child(2){
+    font-weight: var(--fw-bold);
+    color: var(--clr-Very-Dark-Blue);
+}
+
+.title-container p{
+    margin-top: 1rem;
+    color: var(--clr-Grayish-Blue);
+}
+.card__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card{
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem 1rem;
+}
+
+.cyan{
+    border-top: 4px solid var(--clr-Cyan);
+}
+.red{
+    border-top: 4px solid var(--clr-Red);
+}
+.orange{
+    border-top: 4px solid var(--clr-Orange);
+}
+.blue{
+    border-top: 4px solid var(--clr-Blue);
+}
+
+.card h3{
+    color: var(--clr-Very-Dark-Blue);
+}
+
+.card p{
+    color: var(--clr-Grayish-Blue);
+    font-weight: var(--fw-regular);
+    font-size: .9rem;
+    margin: .5rem 0 1.5rem 0;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+@media (min-width:976px){
+    .card__container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+    .cyan,.blue{
+       height: 44.2%; 
+       margin: auto 0;
+    }
+}
+
